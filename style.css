@@ -1,0 +1,58 @@
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #00bcd4, #3f51b5);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-45deg);
+  transition: left 0.5s ease;
+}
+
+button:hover::before {
+  left: 125%;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(63, 81, 181, 0.6);
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 40px;
+  background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  transition: background 1s ease-in-out;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/circles.png');
+  opacity: 0.1;
+  z-index: -1;
+}
